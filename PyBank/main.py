@@ -66,6 +66,17 @@ print("Financial Analysis")
 print("---------------------------------------------")
 print("Total Months: " + str(month_count))
 print("Total Profits: " + str(total_profit))
-print("Average Change: " + "$" + str(average_change_profit))
+print("Average Change: " + "$" + str(average_change_profit)
 print("Greatest Increase in Profits: " + str(greatest_increase_date) + str(greatest_increase))
 print("Greatest Decrease in Profits: " + str(greatest_decrease_date) + str(greatest_decrease))
+
+# Open the text file
+
+with open('analysis.txt, 'w') as text:
+    text.write("---------------------------------------\n")
+    text.write("Financial Analysis" + "\n")
+    text.write("Total Months: " + str(month_count) + "\n")
+    text.write("Total Profit: " + "$" + str(total_profit) +"\n")
+    text.write("Average Change: " + "$" + str(average_change_profit) + "\n")
+    text.write("Greatest Increase In Profit: " + str(greatest_increase_date) + "$" + str(greatest_increase) + "\n")
+    text.write("Greatest Decrease In Profit: " + str(greatest_decrease_date) + "$" + str(greatest_decrease) + "\n")
