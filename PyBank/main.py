@@ -14,12 +14,12 @@ import csv
 # Set path for csv
 pybankcsv = os.path.join("Resources", "pybank_budget_data.csv")
 
-# Create variables
+# Create variables and lists
 total_months = []
 net_profit_loss = []
 change_profit_loss = []
 
-# Start variable counts
+# Variable counts
 month_count = 0
 total_profit = 0
 
@@ -31,7 +31,13 @@ with open(pybankcsv, newline="") as csvfile:
 
 for row in csv_reader:
     # Count months
-    month_count = month_count + 1
+    total_months = month_count + 1
     
-    # Profit/Losses
-    total_profit = int(row 1)
+    # Net total amount of Profit and losses over entire period
+    total_profit = int(row [1])
+
+    # Average of changes in profit and losses over entire period
+
+    # The greatest increase in profits over the entire period
+
+    # The greatest decrease in losses over the entire period
