@@ -46,13 +46,14 @@ for row in csv_reader:
     average_change_profit = (total_profit / month_count)
 
     # In order to find the greatest increase and decrease in profit, I need to calculate the changes from month to month? Store those values?
-    month_to_month = 
-
-
-    # The greatest increase in profits over the entire period, using max function, still need to figure out how to store month to month
+    current_month_profit = int(row[1])
+    previous_month_profit = int(row[1]) - current_month_profit
+    month_to_month = current_month_profit - previous_month_profit
+    
+    # The greatest increase in profits over the entire period, using max function, 
     greatest_increase = max(month_to_month)
 
-    # The greatest decrease in losses over the entire period, using min function, still need to figure out how to store month to month
+    # The greatest decrease in losses over the entire period, using min function, 
     greatest_decrease = min(month_to_month)
 
     # Find the date for the greatest increase
@@ -65,7 +66,7 @@ for row in csv_reader:
 print("Financial Analysis")
 print("---------------------------------------------")
 print("Total Months: " + str(month_count))
-print("Total Profits: " + str(total_profit))
+print("Total Profit: " + str(total_profit))
 print("Average Change: " + "$" + str(average_change_profit)
 print("Greatest Increase in Profits: " + str(greatest_increase_date) + str(greatest_increase))
 print("Greatest Decrease in Profits: " + str(greatest_decrease_date) + str(greatest_decrease))
