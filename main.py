@@ -42,8 +42,10 @@ for row in csv_reader:
     net_profit_loss.append(row[1])
 
 
-    # Average of changes in profit and losses over entire period
-    
+    # Calculate average of changes in profit and losses over entire period. I need to take the total profit/loss and divide it by the amount of months
+    average_change_profit = total_profit / month_count
+
+
 
     # The greatest increase in profits over the entire period
 
