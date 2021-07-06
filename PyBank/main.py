@@ -60,3 +60,12 @@ for row in csv_reader:
 
     #Find the date for the greatest decrease
     greatest_decrease_date = [month_to_month.index(greatest_decrease)]
+
+# Create the print statement
+print("Financial Analysis")
+print("---------------------------------------------")
+print("Total Months: " + str(month_count))
+print("Total Profits: " + str(total_profit))
+print("Average Change: " + "$" + str(average_change_profit))
+print("Greatest Increase in Profits: " + str(greatest_increase_date) + str(greatest_increase))
+print("Greatest Decrease in Profits: " + str(greatest_decrease_date) + str(greatest_decrease))
