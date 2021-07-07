@@ -11,7 +11,7 @@ import os
 import csv
 
 # Set path for csv 
-pypollcsv = os.path.join("Resources", "election_data.csv")
+pypollcsv = os.path.join('Resources', 'election_data.csv')
 
 # Variable counters
 total_votes = 0
@@ -71,3 +71,18 @@ print("Correy: " + correy_percentage + str(total_correy))
 print("Khan: " + khan_percentage + str(total_khan))
 print("Li: " + li_percentage + str(total_li))
 print("O'Tooley: " + otooley_percentage + str(total_otooley))
+print("--------------------------------------")
+print("Winner: " + winner)
+
+# Open text file to write analysis
+with open('analysis.txt, 'w') as text:
+    text.write("Election Results" + "\n")
+    text.write("---------------------------------------\n")
+    text.write("Total Votes: " + str(total_votes) + "\n")
+    text.write("---------------------------------------\n")
+    text.write("Correy: " + correy_percentage + str(total_correy) +"\n")
+    text.write("Khan: " + khan_percentage + str(total_khan) + "\n")
+    text.write("Li: " + li_percentage + str(total_li) + "\n")
+    text.write("O'Tooley: " + otooley_percentage + str(total_otooley) + "\n")
+    text.write("---------------------------------------\n")
+    text.write("Winner: " + winner + "\n")
