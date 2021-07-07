@@ -15,12 +15,33 @@ pypollcsv = os.path.join("Resources", "election_data.csv")
 
 # Variable counters
 total_votes = 0
+total_correy= 0
 total_khan = 0
-total_correy = 0
 total_li = 0
 total_otooley = 0
 
-# Open csv
+# Open csv and skip header
 with open(pypollcsv, newline="") as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
     csv_header = next(csv_reader)
+
+# Read each row
+for row in csv_reader:  
+    # Total number of votes, just found out about the += function, what a time saver!!!
+    total_votes += 1
+
+    # Total votes per candidate
+    if (row[2] == "Correy"):
+        total_correy += 1
+    elif (row[2] == "Khan"):
+        total_khan += 1
+    elif (row[2] == "Li"):
+        total_li += 1
+    elif (row[2] == "O'Tooley"):
+        total_otooley += 1
+
+    # Percentage votes per candidate
+    
+    # Total votes per candidate
+    # Winner based on popular vote
+
