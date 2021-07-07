@@ -86,3 +86,6 @@ with open('analysis.txt, 'w') as text:
     text.write("O'Tooley: " + otooley_percentage + str(total_otooley) + "\n")
     text.write("---------------------------------------\n")
     text.write("Winner: " + winner + "\n")
+
+# Note for Grader: I was not able to upload the .csv file for this code to git hub because it was too large of a file. 
+# Please let me know if there is a way to get around the file size limit. Thank you. 
