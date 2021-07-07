@@ -46,5 +46,14 @@ for row in csv_reader:
     li_percent_vote = total_li / total_votes
     otooley_percent_vote = total_otooley / total_votes
 
+    # Format into percentage
+    correy_percentage = "{:.0%}".format(correy_percent_vote)
+    khan_percentage = "{:.0%}".format(khan_percent_vote)    
+    li_percentage = "{:.0%}".format(li_percent_vote)
+    otooley_percentage = "{:.0%}".format(otooley_percent_vote)
+
+    
     # Winner based on popular vote
+    winner = max(total_votes)
+    if row[2] == winner:
 
