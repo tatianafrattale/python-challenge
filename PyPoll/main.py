@@ -52,8 +52,22 @@ for row in csv_reader:
     li_percentage = "{:.0%}".format(li_percent_vote)
     otooley_percentage = "{:.0%}".format(otooley_percent_vote)
 
-    
     # Winner based on popular vote
-    winner = max(total_votes)
-    if row[2] == winner:
+    if total_correy > total_khan and total_li and total_otooley:
+        winner = "Correy"
+    elif total_khan > total_correy and total_li and total_otooley:
+        winner = "Khan"
+    elif total_li > total_correy and total_khan and total_otooley:
+        winner = "Li"
+    elif total_otooley > total_correy and total_khan and total_li:
+        winner = "O'Tooley"
 
+# Print Statement in integrated terminal
+print("Election Results")  
+print("--------------------------------------")
+print("Total Votes: " + str(total_votes)) 
+print("--------------------------------------")
+print("Correy: " + correy_percentage + str(total_correy))
+print("Khan: " + khan_percentage + str(total_khan))
+print("Li: " + li_percentage + str(total_li))
+print("O'Tooley: " + otooley_percentage + str(total_otooley))
