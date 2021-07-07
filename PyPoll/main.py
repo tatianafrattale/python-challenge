@@ -41,7 +41,10 @@ for row in csv_reader:
         total_otooley += 1
 
     # Percentage votes per candidate
-    
-    # Total votes per candidate
+    correy_percent_vote = total_correy / total_votes
+    khan_percent_vote = total_khan / total_votes
+    li_percent_vote = total_li / total_votes
+    otooley_percent_vote = total_otooley / total_votes
+
     # Winner based on popular vote
 
